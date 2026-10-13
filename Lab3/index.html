@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- У TITLE вказано ПІБ, групу, номер ЛР та номер варіанта -->
+    <title>Католіков В.М., група ІО-43, Лабораторна робота №3, Варіант 7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <h1 style="text-align: center;">Лабораторна робота №3 — Варіант 7</h1>
+
+    <!-- =========================================
+         ЗАВДАННЯ 1: Блочна верстка на float
+         ========================================= -->
+    <section class="task-section">
+        <h2>Завдання 1. Верстка за допомогою float</h2>
+        
+        <div class="layout-float clearfix">
+            <!-- Верхній блок -->
+            <div class="block header-block">
+                <h2>Text (Header)</h2>
+            </div>
+
+            <!-- Центральний контейнер для плаваючих блоків -->
+            <div class="middle-wrapper clearfix">
+                <div class="block main-img-block">
+                    <h2>Img. (Main)</h2>
+                </div>
+                <div class="block side-text-block">
+                    <h2>Text (Side)</h2>
+                </div>
+            </div>
+
+            <!-- Нижній блок -->
+            <div class="block footer-img-block">
+                <h2>Img. (Footer)</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+         ЗАВДАННЯ 2: Блочна верстка на Flexbox
+         ========================================= -->
+    <section class="task-section">
+        <h2>Завдання 2. Верстка за допомогою Flexbox</h2>
+        
+        <div class="layout-flex">
+            <!-- Верхній блок -->
+            <div class="block header-block">
+                <h2>Text (Header)</h2>
+            </div>
+
+            <!-- Центральний flex-контейнер -->
+            <div class="middle-flex">
+                <div class="block main-img-block">
+                    <h2>Img. (Main)</h2>
+                </div>
+                <div class="block side-text-block">
+                    <h2>Text (Side)</h2>
+                </div>
+            </div>
+
+            <!-- Нижній блок -->
+            <div class="block footer-img-block">
+                <h2>Img. (Footer)</h2>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

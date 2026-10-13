@@ -1,0 +1,101 @@
+/* Загальні стилі */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    padding: 20px;
+    color: #333333;
+}
+
+.task-section {
+    max-width: 1000px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #080808;
+}
+
+/* Загальні стилі для блоків макета */
+.block {
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Кольори за макетом Варіанта 7 */
+.header-block {
+    background-color: #42a5f5; /* Синій */
+    height: 100px;
+    width: 100%;
+}
+
+.main-img-block {
+    background-color: #aed581; /* Салатовий */
+    height: 300px;
+}
+
+.side-text-block {
+    background-color: #689f38; /* Темно-зелений */
+    height: 300px;
+}
+
+.footer-img-block {
+    background-color: #f48fb1; /* Рожевий */
+    height: 120px;
+    width: 100%;
+}
+
+/* =========================================
+   ЗАВДАННЯ 1: float (ширина обов'язково у %)
+   ========================================= */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.layout-float .main-img-block {
+    float: left;
+    width: 70%; /* Відсоткова ширина за вимогами */
+}
+
+.layout-float .side-text-block {
+    float: right;
+    width: 30%; /* Відсоткова ширина за вимогами */
+}
+
+/* =========================================
+   ЗАВДАННЯ 2: Flexbox
+   ========================================= */
+.layout-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.middle-flex {
+    display: flex;
+    width: 100%;
+}
+
+.layout-flex .main-img-block {
+    flex: 7; /* Співвідношення 70% */
+}
+
+.layout-flex .side-text-block {
+    flex: 3; /* Співвідношення 30% */
+}
