@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Католіков В.М., група ІО-43, Лабораторна робота №2, Варіант 7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <main class="page-container">
+        <!-- ЗАВДАННЯ 1 -->
+        <section class="task-section">
+            <h2>Завдання 1. Таблиця (Варіант 7)</h2>
+            <table class="variant-table">
+                <!-- 1-й рядок (Католіков): велика комірка ліворуч (rowspan=2) та 2 маленькі праворуч -->
+                <tr class="row-first">
+                    <td rowspan="2" class="cell-large">Католіков</td>
+                    <td>Віктор</td>
+                    <td>Миколайович</td>
+                </tr>
+                <!-- 2-й рядок -->
+                <tr class="row-first">
+                    <td>ІО-43</td>
+                    <td>ЛР-2</td>
+                </tr>
+                <!-- 3-й рядок -->
+                <tr class="row-second">
+                    <td>Варіант 7</td>
+                    <td>-</td>
+                    <td rowspan="2" class="cell-tall">-</td>
+                </tr>
+                <!-- 4-й рядок -->
+                <tr class="row-second">
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- ЗАВДАННЯ 2 -->
+        <section class="task-section">
+            <h2>Завдання 2. Зображення годинника (Варіант 7)</h2>
+            
+            <div class="figures-wrapper">
+                <!-- 1. Годинник через position -->
+                <div class="figure-card">
+                    <h3>1. За допомогою position</h3>
+                    <div class="clock clock-pos">
+                        <!-- Точки (поділки) -->
+                        <div class="dot dot-top"></div>
+                        <div class="dot dot-right"></div>
+                        <div class="dot dot-bottom"></div>
+                        <div class="dot dot-left"></div>
+                        <!-- Стрілки -->
+                        <div class="hand hand-vert"></div>
+                        <div class="hand hand-horiz"></div>
+                    </div>
+                </div>
+
+                <!-- 2. Годинник через transform -->
+                <div class="figure-card">
+                    <h3>2. За допомогою transform</h3>
+                    <div class="clock clock-trans">
+                        <!-- Точки через transform -->
+                        <div class="dot-tr d-12"></div>
+                        <div class="dot-tr d-3"></div>
+                        <div class="dot-tr d-6"></div>
+                        <div class="dot-tr d-9"></div>
+                        <!-- Стрілки через transform -->
+                        <div class="hand-tr hand-v"></div>
+                        <div class="hand-tr hand-h"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
