@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №5 - Завдання 1</title>
+    <style>
+        .error { border: 2px solid red; background-color: #ffe6e6; }
+        .success { border: 2px solid green; }
+        .result-box { display: none; margin-top: 20px; padding: 10px; border: 1px solid #ccc; }
+        .form-group { margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <h2>Форма для заповнення (Варіант 12)</h2>
+    <form id="myForm">
+        <div class="form-group">
+            <label>ПІБ (наприклад, Іванов І.І.):</label><br>
+            <input type="text" id="pib" name="pib">
+        </div>
+        <div class="form-group">
+            <label>ID-card (наприклад, ТТ №123456):</label><br>
+            <input type="text" id="idcard" name="idcard">
+        </div>
+        <div class="form-group">
+            <label>Дата народж. (наприклад, 12.05.2000):</label><br>
+            <input type="text" id="birthdate" name="birthdate">
+        </div>
+        <div class="form-group">
+            <label>Адреса (наприклад, м. 01001):</label><br>
+            <input type="text" id="address" name="address">
+        </div>
+        <div class="form-group">
+            <label>e-mail (наприклад, text@email.com):</label><br>
+            <input type="text" id="email" name="email">
+        </div>
+        <button type="button" onclick="validateForm()">Підтвердити</button>
+    </form>
+
+    <div id="resultBox" class="result-box">
+        <h3>Введені дані:</h3>
+        <p id="resPib"></p>
+        <p id="resIdcard"></p>
+        <p id="resBirthdate"></p>
+        <p id="resAddress"></p>
+        <p id="resEmail"></p>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>
