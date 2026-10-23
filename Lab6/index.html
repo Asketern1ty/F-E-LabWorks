@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Згідно з вимогами, тег title містить ПІБ, групу, номер ЛР та варіант -->
+    <title>Католіков Віктор Миколайович, ІО-43, ЛР 6, Варіант 7</title>
+    
+    <style>
+        /* Загальні стилі */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f2f3;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Стилі кнопки та повідомлення */
+        button {
+            background-color: #4a4a4a;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 3px;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        #statusMessage {
+            font-size: 24px;
+            margin-bottom: 30px;
+            height: 30px; /* Фіксована висота, щоб сторінка не стрибала */
+        }
+
+        /* Контейнер для карток (Flexbox для вирівнювання в ряд) */
+        .users-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Стилі самої картки користувача */
+        .user-card {
+            background-color: #4a5568; /* Темний фон як у прикладі */
+            color: #e2e8f0;
+            border-radius: 5px;
+            text-align: left;
+            width: 220px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Щоб картинка не вилазила за краї заокруглень */
+        }
+
+        .user-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 15px;
+        }
+        
+        .card-content {
+            padding: 0 15px 20px 15px;
+        }
+
+        .info-group {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.4;
+            word-wrap: break-word; 
+        }
+
+        .info-group a {
+            color: #90cdf4;
+            text-decoration: none;
+        }
+
+        .info-group a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <button id="downloadBtn">Download</button>
+        <div id="statusMessage"></div>
+        <div id="usersContainer" class="users-container"></div>
+    </div>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', () => {
+            const statusMessage = document.getElementById('statusMessage');
+            const usersContainer = document.getElementById('usersContainer');
+
+            // Очищення попередніх результатів та виведення статусу
+            statusMessage.textContent = "Завантаження...";
+            statusMessage.style.color = "black";
+            usersContainer.innerHTML = ""; 
+
+            // Використання fetch та promise для отримання 5 користувачів
+            fetch('https://randomuser.me/api/?results=5')
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error('Помилка мережі');
+                    }
+                    return response.json();
+                })
+                .then((data) => {
+                    // Перебір масиву користувачів та генерація HTML
+                    data.results.forEach(user => {
+                        
+                        // Зчитування полів згідно з варіантом 7 (1, 4, 6, 3, 7)
+                        const pictureUrl = user.picture.large;
+                        const city = user.location.city;
+                        const postcode = user.location.postcode;
+                        const cell = user.cell;
+                        const email = user.email;
+
+                        // Створення HTML-коду для картки
+                        const cardHTML = `
+                            <div class="user-card">
+                                <img src="${pictureUrl}" alt="User Picture">
+                                <div class="card-content">
+                                    <div class="info-group">
+                                        <strong>City:</strong><br>${city}
+                                    </div>
+                                    <div class="info-group">
+                                        <strong>Postcode:</strong><br>${postcode}
+                                    </div>
+                                    <div class="info-group">
+                                        <strong>Cell:</strong><br>${cell}
+                                    </div>
+                                    <div class="info-group">
+                                        <strong>E-mail:</strong><br><a href="mailto:${email}">${email}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        // Додавання картки у контейнер
+                        usersContainer.innerHTML += cardHTML;
+                    });
+
+                    // Виведення повідомлення про успіх
+                    statusMessage.textContent = "success!";
+                    statusMessage.style.color = "#2f855a";
+                })
+                .catch((error) => {
+                    console.error('Помилка:', error);
+                    statusMessage.textContent = "Помилка завантаження даних.";
+                    statusMessage.style.color = "#c53030";
+                });
+        });
+    </script>
+</body>
+</html>

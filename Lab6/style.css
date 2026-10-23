@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f2f3;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+#statusMessage {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.user-card {
+    background-color: #4a5568;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.user-card img {
+    width: 100%;
+    max-width: 150px;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 5px;
+}
+
+.info-group {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.users-container {
+    display: flex;
+    flex-wrap: wrap;      
+    justify-content: center;
+    gap: 20px;           
+    margin-top: 20px;
+}
+
+.user-card {
+    background-color: #4a5568;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+    width: 200px;         
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.user-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 5px;
+}
+
+.info-group {
+    margin-bottom: 10px;
+    font-size: 13px;
+    word-wrap: break-word; 
+}
+
+.info-group a {
+    color: #63b3ed;
+    text-decoration: none;
+}
