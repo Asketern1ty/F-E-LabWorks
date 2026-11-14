@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/F-E-LabWorks/Lab7/static/css/main.be2c4a2b.css",
+    "main.js": "/F-E-LabWorks/Lab7/static/js/main.96ce6601.js",
+    "index.html": "/F-E-LabWorks/Lab7/index.html",
+    "main.be2c4a2b.css.map": "/F-E-LabWorks/Lab7/static/css/main.be2c4a2b.css.map",
+    "main.96ce6601.js.map": "/F-E-LabWorks/Lab7/static/js/main.96ce6601.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be2c4a2b.css",
+    "static/js/main.96ce6601.js"
+  ]
+}
